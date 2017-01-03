@@ -6,10 +6,13 @@ import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { HomeComponent, DialogContent } from './pages/home/home.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    HomeComponent,
+    DialogContent,
   ],
   imports: [
     BrowserModule,
@@ -19,6 +22,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule
   ],
   providers: [],
+  entryComponents: [DialogContent],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

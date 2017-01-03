@@ -1,0 +1,168 @@
+<!-- BUTTONS -->
+<md-card>
+  <h3>Buttons (md-button)</h3>
+  <button md-button md-tooltip="This is a tooltip!">FLAT</button>
+  <button md-raised-button md-tooltip="Raised">RAISED</button>
+  <button md-raised-button color="primary" md-tooltip="Primary">PRIMARY RAISED</button>
+  <button md-raised-button color="accent" md-tooltip="Accent">ACCENT RAISED</button>
+  <button md-raised-button color="warn" md-tooltip="Warning">WARNING RAISED</button>
+  <button md-raised-button disabled>DISABLED</button>
+</md-card>
+
+<!-- FABS -->
+<md-card>
+  <h3>Floating Action Buttons (md-fab)</h3>
+  <button md-fab md-tooltip="Default">
+    <md-icon>people</md-icon>
+  </button>
+  <button md-fab color="primary" md-tooltip="Primary">
+    <md-icon>check circle</md-icon>
+  </button>
+  <button md-fab color="warn" md-tooltip="Warning">
+    <md-icon>android</md-icon>
+  </button>
+  <button md-fab disabled md-tooltip="Disabled">
+    <md-icon>comment</md-icon>
+  </button>
+</md-card>
+
+<!-- ICONS -->
+<md-card>
+    <h3>Icons (md-icon)</h3>
+    <md-icon color="primary">people</md-icon>
+    <md-icon color="accent">check</md-icon>
+    <md-icon color="warn">android</md-icon>
+    <md-icon>comment</md-icon>
+    <md-icon color="primary">menu</md-icon>
+    <md-icon color="accent">favorite</md-icon>
+    <md-icon color="warn">more</md-icon>
+    <md-icon>home</md-icon>
+    <md-icon color="primary">launch</md-icon>
+    <md-icon color="accent">add</md-icon>
+    <md-icon color="warn">mail</md-icon>
+    <md-icon>cloud</md-icon>
+    <md-icon color="primary">alarm</md-icon>
+    <md-icon color="accent">face</md-icon>
+    <md-icon color="warn">lock</md-icon>
+    <md-icon>timeline</md-icon>
+    <md-icon color="primary">shop</md-icon>
+    <md-icon color="warn">build</md-icon>
+    <md-icon color="warn">star</md-icon>
+    <a href="https://material.io/icons/" target="_blank">More Icons</a>
+</md-card>
+
+<!-- CHECKBOXES -->
+<md-card>
+  <h3>Checkboxes (md-checkbox)</h3>
+  <md-checkbox>Unchecked</md-checkbox>
+  <md-checkbox [checked]="true">Checked</md-checkbox>
+  <md-checkbox [indeterminate]="true">Indeterminate</md-checkbox>
+  <md-checkbox [disabled]="true">Disabled</md-checkbox>
+</md-card>
+
+<!-- RADIO BUTTONS -->
+<md-card>
+  <h3>Radio Buttons (md-radio-button)</h3>
+  <md-radio-button name="symbol" md-tooltip="Warning">Unchecked</md-radio-button>
+  <md-radio-button name="symbol" [checked]="true">Checked</md-radio-button>
+  <md-radio-button name="symbol" disabled>Disabled</md-radio-button>
+</md-card>
+
+<!-- INPUTS -->
+<md-card class="app-input-section">
+  <h3>Inputs</h3>
+  <!-- md-input -->
+  <h4>(md-input)</h4>
+  <md-input placeholder="First name"></md-input>
+  <!-- md-hint -->
+  <h4>(md-hint)</h4>
+  <md-input #nickname placeholder="Nickname" maxlength="50">
+    <md-hint align="end">
+      {{nickname.characterCount}} / 50
+    </md-hint>
+  </md-input>
+  <!-- md-placeholder -->
+  <h4>(md-placeholder)</h4>
+  <md-input>
+    <md-placeholder>
+      <i class="material-icons app-input-icon">android</i> Favorite phone
+    </md-placeholder>
+  </md-input>
+  <!-- md-prefix -->
+  <h4>(md-prefix)</h4>
+  <md-input placeholder="Motorcycle model">
+    <span md-prefix>
+      <i class="material-icons app-input-icon">motorcycle</i>&nbsp;
+    </span>
+  </md-input>
+</md-card>
+
+<!-- LISTS -->
+<md-card>
+  <h3>Lists (md-list, md-list-item, md-line)</h3>
+  <md-list class="app-list">
+    <md-list-item *ngFor="let car of cars">
+      <h3 md-line>{{car.name}}</h3>
+      <p md-line class="demo-secondary-text">{{car.rating}}</p>
+    </md-list-item>
+  </md-list>
+</md-card>
+
+<!-- SPINNERS -->
+<md-card>
+  <h3>Spinners (md-spinner)</h3>
+  <md-spinner class="app-spinner"></md-spinner>
+  <md-spinner class="app-spinner"></md-spinner>
+</md-card>
+
+<!-- PROGRESS BARS -->
+<md-card>
+    <h3>Progress Bars (md-progress-bar)</h3>
+  <label>
+        Indeterminate progress-bar
+        <md-progress-bar
+            class="app-progress"
+            mode="indeterminate"
+            aria-label="Indeterminate progress-bar example"></md-progress-bar>
+      </label>
+
+  <label>
+        Determinate progress bar - {{progress}}%
+        <md-progress-bar
+            class="app-progress"
+            color="warn"
+            mode="determinate"
+            [value]="progress"
+            aria-label="Determinate progress-bar example"></md-progress-bar>
+      </label>
+</md-card>
+<!-- TAB GROUPS -->
+<md-card>
+  <h3>Tab Group (md-tab-group, md-tab)</h3>
+  <md-tab-group>
+    <md-tab label="Tab 1">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut efficitur quam vel velit varius interdum. Quisque posuere placerat dui. Aliquam est justo, consectetur sed tellus ac, consequat condimentum lorem. Aliquam in mattis mi. Maecenas ut rutrum nunc. Integer efficitur elit nisi, quis lobortis mi molestie sit amet. Cras ultricies ante sit amet erat scelerisque egestas in aliquam orci. Vestibulum enim purus, laoreet at tellus non, ultrices cursus odio. Quisque sit amet justo sapien. Suspendisse non egestas nisl.</p>
+    </md-tab>
+    <md-tab label="Tab 2">
+      <p>Suspendisse felis odio, tincidunt ut sagittis et, congue nec nibh. Curabitur ullamcorper, orci a dictum sodales, est tellus rhoncus lacus, quis sodales lacus est id metus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris pretium feugiat convallis. Suspendisse vel mollis orci. Vivamus porttitor risus id ullamcorper eleifend. Nunc facilisis viverra laoreet. Praesent tristique consectetur placerat. Nam semper faucibus nibh, in dictum nulla efficitur convallis. Fusce eu metus elit. Nunc rhoncus mauris velit, eget lobortis sem venenatis id.</p>
+    </md-tab>
+  </md-tab-group>
+</md-card>
+
+<!-- MENU -->
+<md-card>
+  <h3>MENU (md-menu, md-menu-item)</h3>
+  <button md-button [md-menu-trigger-for]="menu">MENU</button>
+</md-card>
+<md-menu #menu="mdMenu">
+  <button md-menu-item>Settings</button>
+  <button md-menu-item>Help</button>
+  <button md-menu-item>Exit</button>
+</md-menu>
+<!-- DIALOG & SNACKBAR -->
+<md-card>
+  <h3>DIALOG &amp; SNACKBAR</h3>
+  <p>Last dialog result: {{lastDialogResult}}</p>
+  <button md-raised-button (click)="openDialog()">DIALOG</button>
+  <button md-raised-button (click)="showSnackbar()">SNACKBAR</button>
+</md-card>
