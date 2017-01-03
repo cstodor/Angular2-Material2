@@ -5,6 +5,7 @@ import { HttpModule } from '@angular/http';
 import { MaterialModule } from '@angular/material';
 
 import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { AppComponent } from './app.component';
     FormsModule,
     HttpModule,
     MaterialModule.forRoot(),
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
