@@ -7,12 +7,14 @@ import { MaterialModule } from '@angular/material';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent, DialogContent } from './pages/home/home.component';
+import { DialogComponent } from './shared/dialog/dialog.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
     DialogContent,
+    DialogComponent
   ],
   imports: [
     BrowserModule,
