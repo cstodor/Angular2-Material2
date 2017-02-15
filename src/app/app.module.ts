@@ -9,6 +9,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeComponent, DialogContent } from './pages/home/home.component';
 import { DialogComponent } from './shared/dialog/dialog.component';
 
+import { PagesService } from './pages/pages.service';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,7 +25,7 @@ import { DialogComponent } from './shared/dialog/dialog.component';
     MaterialModule.forRoot(),
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PagesService],
   entryComponents: [DialogContent],
   bootstrap: [AppComponent]
 })
