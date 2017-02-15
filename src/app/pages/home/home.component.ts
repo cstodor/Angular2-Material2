@@ -1,6 +1,9 @@
 import { Component, OnInit, Optional } from '@angular/core';
 import { MdDialog, MdDialogRef, MdSnackBar } from '@angular/material';
 
+import { PagesService } from '../pages.service';
+import { ITooltip } from '../../../api/tooltip';
+
 @Component({
   selector: "app-home",
   templateUrl: "./home.component.html",
@@ -11,6 +14,10 @@ export class HomeComponent implements OnInit {
   isDarkTheme: boolean = false;
   lastDialogResult: string;
 
+  _tooltips: ITooltip[];
+  _tooltip: ITooltip;
+  errorMessage: string;
+
   cars: any[] = [
     { name: "Audi", rating: "Excellent" },
     { name: "BMW", rating: "Great" },
@@ -20,6 +27,7 @@ export class HomeComponent implements OnInit {
   progress: number = 0;
 
   constructor(
+    private _pagesService: PagesService,
     private _dialog: MdDialog,
     private _snackbar: MdSnackBar) {
     // Update the value for the progress-bar on an interval.
@@ -41,6 +49,11 @@ export class HomeComponent implements OnInit {
   }
 
   ngOnInit() {
+    // Get The List of Tooltips
+    this._pagesService.getTooltips()
+      .subscribe(
+      tooltips => this._tooltips = tooltips,
+      error => this.errorMessage = <any>error);
   }
 
 }
