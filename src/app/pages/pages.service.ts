@@ -3,12 +3,12 @@ import { Http } from '@angular/http';
 import { Observable } from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
 
-import { ITooltip } from '../../api/tooltip';
+import { ITooltip } from 'api/tooltip';
 
 @Injectable()
 export class PagesService {
 
-    private tooltipsUrl = "api/tooltips.json";
+    private tooltipsUrl = "../../api/tooltips.json";
 
     constructor(private _http: Http) { }
 
